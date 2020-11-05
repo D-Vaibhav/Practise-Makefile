@@ -1,6 +1,5 @@
-# by default it'll make first rule only
+all: say_hello generate_files
 
-# RULE
 say_hello:
 	@echo "Hello World"	
 
