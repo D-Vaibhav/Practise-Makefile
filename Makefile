@@ -1,16 +1,6 @@
-# it records all the targets which do not include any files, (holds all other phony target)
-.PHONY: all say_hello generate_files clean_files
+.PHONY = all 
 
-# it's good practise to use all naming conventionn and defined as first rule
-all: say_hello generate_files
+CC := go
 
-say_hello:
-	@echo "Hello World"	
-
-generate_files:
-	@echo "pack.txt files r going to be generated"
-	touch pack.txt
-
-clean_files:
-	@echo "Deleting all files"
-	rm *.txt
+all:
+	${CC} run server.go
